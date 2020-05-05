@@ -5,8 +5,13 @@ describe BookmarkManagerLog do
   it "returns a list of bookmarks" do
     expect(subject).to respond_to(:bookmark_list)
   end
-end
 
-# bookmark = double("Bookmark")
-# @bookmark_manager = BookmarkManager.new(bookmark)
-# expect(@bookmark_manager.bookmark_list).to eq true
+  describe '.all' do
+    it 'returns a list of bookmarks' do
+      bookmarks = Bookmark.all
+  
+      expect(bookmarks).to include "http://www.makersacademy.com"
+      expect(bookmarks).to include "http://www.destroyallsoftware.com"
+    end
+  end
+end
