@@ -1,16 +1,12 @@
 # in spec/spec_helper.rb
-require 'pg'
 
-# require_relative './setup_test_database'
+require_relative './setup_test_database'
 
 ENV['ENVIRONMENT'] = 'test'
 
 RSpec.configure do |config|
   config.before(:each) do
-    p "Setting up test database..."
-    connection = PG.connect(dbname: 'bookmark_manager_test')
-    # Clear the bookmarks table
-    connection.exec("TRUNCATE bookmarks;")
+    setup_test_database
   end
 end
 
