@@ -1,8 +1,15 @@
 
 #User Story
 
-As a user So that I can keep up to date
+1. Showing bookmarks
+As a user
+So that I can keep up to date
 I would like to see a list of my bookmarks
+
+2. Adding bookmarks
+As a user
+So that I can keep track of my favourite web pages
+I would like to create a bookmark
 
 #Domain Model
 
