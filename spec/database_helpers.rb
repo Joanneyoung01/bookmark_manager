@@ -1,4 +1,5 @@
 require 'pg'
+require 'spec_helper'
 
 def persisted_data(id:)
   connection = PG.connect(dbname: 'bookmark_manager_test')

@@ -1,4 +1,5 @@
 require 'pg'
+require 'spec_helper'
 
 def setup_test_database
   p "Setting up test database..."
